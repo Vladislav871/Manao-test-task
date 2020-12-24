@@ -22,7 +22,7 @@
                 <p>Password</p>
                 <input type="text" required>
             </div>
-            <p>If you don't have an account <a href="../index.html">sign up</a></p>
+            <p>If you don't have an account <a href="../index.php">sign up</a></p>
             <button type="submit"><p>Login in</p></button>
         </form>
     </div>
