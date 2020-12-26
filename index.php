@@ -45,6 +45,6 @@
     </div>
 </section>
 <script src="scripts/jquery-3.5.1.min.js"></script>
-<script src="scripts/query.js"></script>
+<script src="scripts/ajax-query.js"></script>
 </body>
 </html>
