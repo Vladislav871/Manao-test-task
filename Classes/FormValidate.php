@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/../Classes/Validator.php';
+require_once __DIR__.'/../Classes/Validator.php';
 
 class FormValidate extends Validator
 {
