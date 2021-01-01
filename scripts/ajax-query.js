@@ -36,6 +36,9 @@ $("#registration").submit(function (event) {
                     $("#nameMessage > span").text(null);
                 }, 3000);
             }
+            if (data.maessage != null) {
+                console.log(data.message);
+            }
         }
     });
 });
