@@ -15,7 +15,7 @@
         </div>
         <form id="registration" class="registration-fields" action="#" method="post">
             <div class="field">
-                <p>Login(unique)</p>
+                <p>Login</p>
                 <input name="login" type="text">
                 <div id="loginMessage"><span></span></div>
             </div>
@@ -30,7 +30,7 @@
                 <div id="confirmMessage"><span></span></div>
             </div>
             <div class="field">
-                <p>E-mail(unique)</p>
+                <p>E-mail</p>
                 <input name="email" type="email">
                 <div id="emailMessage"><span></span></div>
             </div>
@@ -40,11 +40,11 @@
                 <div id="nameMessage"><span></span></div>
             </div>
             <p>If you already have an account <a href="login_form/login.php">login in</a></p>
-            <button type="submit"><p>Create</p></button>
+            <button name="submit" type="submit"><p>Create</p></button>
         </form>
     </div>
 </section>
 <script src="scripts/jquery-3.5.1.min.js"></script>
-<script src="scripts/ajax-query.js"></script>
+<script src="scripts/ajax-query_reg.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 <?php
-
 class User
 {
     private $login;
@@ -7,7 +6,7 @@ class User
     private $email;
     private $name;
 
-    public function __construct($login, $password, $email, $name)
+    public function __construct($login = null, $password = null, $email = null, $name = null)
     {
         $this->login = $login;
         $this->password = $this->hashPassword($password);
@@ -16,7 +15,7 @@ class User
     }
 
     public function hashPassword($password) {
-        return md5($password);
+        return "sjkahwhb11918".md5($password);
     }
 
     public function getLogin()
@@ -58,5 +57,4 @@ class User
     {
         $this->name = $name;
     }
-
 }

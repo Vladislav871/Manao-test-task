@@ -1,8 +1,8 @@
 $("#registration").submit(function (event) {
     event.preventDefault();
     $.ajax({
-        url: 'scripts/ajax.php',
-        method: 'get',
+        url: 'scripts/ajax-reg.php',
+        method: 'post',
         dataType: 'json',
         data: $(this).serialize(),
         success: function (data) {
@@ -36,8 +36,8 @@ $("#registration").submit(function (event) {
                     $("#nameMessage > span").text(null);
                 }, 3000);
             }
-            if (data.maessage != null) {
-                console.log(data.message);
+            if (data.redirect != null) {
+                window.location.replace(data.redirect);
             }
         }
     });
