@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if (empty($_SESSION['name'])) {
+        header('Location: /../Manao-test-task/index.php');
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +17,10 @@
 </head>
 <body>
     <section class="container">
-        <div class="container__greeting">
-            <p>Hello, someone!</p>
-            <button type="button" onclick="if (confirm('Do you want to leave the page?')) { exit(); }">Exit</button>
-        </div>
+        <form action="/Manao-test-task/scripts/logout.php" class="container__greeting">
+            <p><?php echo "Hello ".$_SESSION['name']."!"; ?></p>
+            <button type="submit">Exit</button>
+        </form>
     </section>
 </body>
 </html>

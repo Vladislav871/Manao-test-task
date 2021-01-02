@@ -95,6 +95,18 @@ class DataBase
         return false;
     }
 
+    public function getUser($login) {
+        $users = $this->rootUsers;
+
+        foreach ($users->user as $user) {
+            if ($user->login == $login) {
+                return array('login' => $user->login, 'email' => $user->email[0], 'name' => $user->name[0]);
+            }
+        }
+
+        return null;
+    }
+
     public function addError($message, $name) {
         $this->errors = array_merge($this->errors, array($name => $message));
     }

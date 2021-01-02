@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if (!empty($_SESSION)) {
+        header('Location: /../Manao-test-task/main_page/main_page.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +23,12 @@
         <form id="login" class="login-fields" action="#" method="post">
             <div class="field">
                 <p>Login</p>
-                <input name="login" type="text" required>
+                <input name="login" type="text">
                 <div id="loginMessage"><span></span></div>
             </div>
             <div class="field">
                 <p>Password</p>
-                <input name="pass" type="text" required>
+                <input name="pass" type="text">
                 <div id="passMessage"><span></span></div>
             </div>
             <p>If you don't have an account <a href="../index.php">sign up</a></p>

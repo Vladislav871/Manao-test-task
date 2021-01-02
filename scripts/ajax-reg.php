@@ -1,9 +1,9 @@
 <?php
-    require __DIR__ . '/../Classes/FormValidate.php';
+    require __DIR__ . '/../Classes/RegValidate.php';
     require __DIR__.'/../Classes/User.php';
     require __DIR__.'/../Classes/DataBase.php';
 
-    $validator = new FormValidate($_POST);
+    $validator = new RegValidate($_POST);
 
     header('Content-Type: application/json');
 
@@ -26,7 +26,13 @@
             exit;
         }
 
-        $_SESSION['authorization'] = true;
+        setcookie('name', $user->getName());
+        setcookie('login', $user->getLogin());
+        setcookie('email', $user->getEmail());
+
+        session_start();
+
+        $_SESSION['name'] = $user->getName();
 
         $result = array(
             'redirect' => '/../Manao-test-task/main_page/main_page.php'

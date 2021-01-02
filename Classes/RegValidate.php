@@ -2,18 +2,13 @@
 
 require_once __DIR__.'/../Classes/Validator.php';
 
-class FormValidate extends Validator
+class RegValidate extends Validator
 {
     private $fields = [];
 
     public function __construct(array $fields)
     {
         $this->fields = $fields;
-    }
-
-    public function getFields()
-    {
-        return $this->fields;
     }
 
     function validate()
