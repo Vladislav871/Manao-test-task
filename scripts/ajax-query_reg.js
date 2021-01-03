@@ -1,3 +1,4 @@
+// Обработка ajax-запроса формы регистрации
 $("#registration").submit(function (event) {
     event.preventDefault();
     $.ajax({

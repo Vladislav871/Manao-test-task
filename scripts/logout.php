@@ -1,4 +1,5 @@
 <?php
+    // Выход из сессии
     session_start();
 
     $_SESSION['name'] = null;

@@ -16,6 +16,7 @@
         $db = new DataBase();
         $user = new User($login, $pass);
 
+        // Проверка пользователя в БД
         $result = $db->isUser($user->getLogin(), $user->getPassword());
 
         if ($result) {
@@ -39,7 +40,7 @@
             echo json_encode($res);
         } else {
             $res = array(
-                'message' => 'User doesn\'t exist!'
+                'login' => 'User wasn\'t found!'
             );
 
             echo json_encode($res);
