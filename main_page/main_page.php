@@ -1,9 +1,5 @@
 <?php
-    session_start();
-
-    if (empty($_SESSION['name'])) {
-        header('Location: /../Manao-test-task/index.php');
-    }
+    include __DIR__."/../scripts/isSessionMainPage.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +14,7 @@
 <body>
     <section class="container">
         <form action="/Manao-test-task/scripts/logout.php" class="container__greeting">
-            <p><?php echo "Hello ".$_SESSION['name']."!"; ?></p>
+            <p><?php sayHello($_SESSION['name']); ?></p>
             <button type="submit">Exit</button>
         </form>
     </section>

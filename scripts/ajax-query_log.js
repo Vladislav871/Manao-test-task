@@ -1,3 +1,4 @@
+// Обработка ajax-запроса формы логина
 $("#login").submit(function (event) {
     event.preventDefault();
     $.ajax({
@@ -17,9 +18,6 @@ $("#login").submit(function (event) {
                 setTimeout(() => {
                     $("#passMessage > span").text(null);
                 }, 3000);
-            }
-            if (data.message != null) {
-                console.log(data.message);
             }
             if (data.redirect != null) {
                 window.location.replace(data.redirect);
